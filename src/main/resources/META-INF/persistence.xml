@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+<!--JPA가 있는데 이름을 뭘로 할거니-->
+    <persistence-unit name="hello">
+        <properties>
+            <!-- 필수 속성 -->
+            <!--DB 뭐쓰는지?-->
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <!--이거 되게 중요함 / JPA는 특정 DB에 종속 되지 않음 / 데이터 베이스 방언 설정-->
+            <!--hibernate. 로 시작하는건 하이버네이트 전용 옵션이라고 보면됨-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <!-- 옵션 -->
+            <property name="hibernate.show_sql" value="true"/>
+            <!--sql로 바꿔주는것-->
+            <property name="hibernate.format_sql" value="true"/>
+            <!--이쿼리가 왜나온거야 라고 설정-->
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+        </properties>
+    </persistence-unit>
+</persistence>
