@@ -6,10 +6,12 @@
     <persistence-unit name="hello">
         <properties>
             <!-- 필수 속성 -->
+
             <!--DB 뭐쓰는지?-->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
             <property name="javax.persistence.jdbc.password" value=""/>
+
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
             <!--이거 되게 중요함 / JPA는 특정 DB에 종속 되지 않음 / 데이터 베이스 방언 설정-->
             <!--hibernate. 로 시작하는건 하이버네이트 전용 옵션이라고 보면됨-->

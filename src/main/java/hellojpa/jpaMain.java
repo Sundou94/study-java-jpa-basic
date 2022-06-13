@@ -18,14 +18,16 @@ public class jpaMain {
         //1. JPA에서는 트렌젝션이 정말 중요하다 getTransaction을 통해 EntityTransaction을 하나 생성한다.
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-        System.out.println("테스트1");
-        //왜 쿼리가 안나올까용
+
+        //왜 쿼리가 안나올까
         try{
-            System.out.println("테스트2");
-            Member findMember = entityManager.find(Member.class, 2);
-            System.out.println("findMember.id = " + findMember.getId());
-            System.out.println("findMember.id = " + findMember.getName());
+
+            Member findMember = entityManager.find(Member.class, 1);
+            System.out.println(findMember.getId());
+            System.out.println(findMember.getName());
+
             tx.commit();
+//            System.out.println("?");
         }catch (Exception e) {
             tx.rollback();
         }finally {
