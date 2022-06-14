@@ -25,6 +25,7 @@
 <!--JPA 하이버네이트-->
         <dependency>
             <groupId>org.hibernate</groupId>
+            <!--artifactId 를 넣어주면 연관된 라이브러리를 모두 가져온다.-->
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.3.10.Final</version>
         </dependency>
