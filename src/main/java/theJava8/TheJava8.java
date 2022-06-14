@@ -40,9 +40,12 @@ public class TheJava8 {
         ReturnInt returnInt = (num) -> {
             return num + 10;
         };
+        System.out.println(returnInt.doIt(1));
+        System.out.println(returnInt.doIt(1));
+        System.out.println(returnInt.doIt(1));
 
-        System.out.println(returnInt.doIt(1));
-        System.out.println(returnInt.doIt(1));
-        System.out.println(returnInt.doIt(1));
+        /*
+        pure function 을 달성하기 위해서는 함수 밖에있는 값을 참조하거나 변경하려고 하면 안된다.
+         */
     }
 }
